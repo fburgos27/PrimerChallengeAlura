@@ -23,26 +23,38 @@
         </header>
 
         <main>
-            <section class="campoTexto">
-                <p>Ingrese el texto aquí</p>
+            <section class="campoTextoCompleto">
+                <div class="campoTexto">
+                    <textarea id="campoTexto" cols="70" rows="10" id="textoEncriptar" inputmode="latin" autofocus required type="text" style="text-transform:lowercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="Ingrese aquí el texto que desea encriptar o desencriptar"></textarea>
+                </div>
+
+                <div class="aviso">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"/></svg>
+                        Solo letras minúsculas y sin acento
+                    </p>
+                </div>
 
             </section>
-            <section class="aviso">
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"/></svg>
-                    Solo letras minúsculas y sin acento
-                </p>
-            </section>
-            <section class="botonEncriptar" >
-                <p>Boton encriptar</p>
 
+
+            <section class="botones" >
+                <div class="botonEncriptar">
+                    <p>Boton encriptar</p>
+                    <input type="button" value="Encriptar" class="botonEncriptar" onclick="encriptar(), borrarAreaTexto()">
+                </div>
+                <div>
+                    <p>Boton desencriptar</p>
+                    <input type="button" value="Desencriptar" class="botonDesencriptar" onclick="desencriptar()">
+                </div>
+                
             </section>
-            <section class="botonDesencriptar" >
-                <p>Boton desencriptar</p>
-            </section>
-            <section class="areaEncriptado" >
-                <p>Ningún mensaje fue encontrado</p>
-                <p>Ingrese el texto que desea encriptar o desencriptar en la zona apropiada</p>
+
+            <section id="areaEncriptado" >
+                <img src="images/Muñeco.svg" alt="Imagen de persona buscando" id="imagenMuñeco">
+                <p class="sinMensaje">Ningún mensaje fue encontrado</p>
+                <p class="indicacionUsuario">Ingrese el texto que desea encriptar o desencriptar en la zona apropiada</p>
+                <textarea class="mensajeEncriptado" cols="70" rows="10"></textarea>
             </section>
         </main>
 
