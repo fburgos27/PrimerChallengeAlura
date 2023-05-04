@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+        
     </head>
 
     <body>
@@ -23,12 +23,12 @@
         </header>
 
         <main>
-            <section class="campoTextoCompleto">
-                <div class="campoTexto">
-                    <textarea id="campoTexto" cols="70" rows="10" id="textoEncriptar" inputmode="latin" autofocus required type="text" style="text-transform:lowercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="Ingrese aquí el texto que desea encriptar o desencriptar"></textarea>
+            <section class="text-area-all">
+                <div class="text-area">
+                    <textarea class="encrypt-text" cols="70" rows="10" inputmode="latin" autofocus required type="text" style="text-transform:lowercase;" placeholder="Ingrese aquí el texto que desea encriptar o desencriptar"></textarea>
                 </div>
 
-                <div class="aviso">
+                <div class="advice">
                     <p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"/></svg>
                         Solo letras minúsculas y sin acento
@@ -38,23 +38,21 @@
             </section>
 
 
-            <section class="botones" >
-                <div class="botonEncriptar">
-                    <p>Boton encriptar</p>
-                    <input type="button" value="Encriptar" class="botonEncriptar" onclick="encriptar(), borrarAreaTexto()">
+            <section class="buttons" >
+                <div>
+                    <input type="button" value="Encriptar" id="encrypt-button" onclick="encryptButton()">
                 </div>
                 <div>
-                    <p>Boton desencriptar</p>
-                    <input type="button" value="Desencriptar" class="botonDesencriptar" onclick="desencriptar()">
+                    <input type="button" value="Desencriptar" id="decrypt-button" onclick="decryptButton()">
                 </div>
-                
+
             </section>
 
-            <section id="areaEncriptado" >
-                <img src="images/Muñeco.svg" alt="Imagen de persona buscando" id="imagenMuñeco">
-                <p class="sinMensaje">Ningún mensaje fue encontrado</p>
-                <p class="indicacionUsuario">Ingrese el texto que desea encriptar o desencriptar en la zona apropiada</p>
-                <textarea class="mensajeEncriptado" cols="70" rows="10"></textarea>
+            <section>
+                <textarea id="e-area" class="encrypted-area" cols="20" rows="10"></textarea>
+                <div>
+                    <input type="button" value="Copiar" id="copy-button" onclick="copyButton()" >
+                </div>
             </section>
         </main>
 
@@ -64,9 +62,10 @@
     <script src="script.js"></script>
 
     <footer>
-        <p class="desarrollador">Fabián Burgos </br> 
+        <p class="developer">Fabián Burgos </br> 
             OracleOne Grupo5 </br>  
             2023</p>
     </footer>
+
 
 </html>    

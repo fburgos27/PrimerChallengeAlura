@@ -1,6 +1,18 @@
-
-.campoTexto {
+body {
+    font-family: 'Potta One', cursive;
+    font-family: 'Press Start 2P', cursive;
 }
+
+textarea::placeholder {
+    font-family: 'Potta One', cursive;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#encrypt-button, #decrypt-button, #copy-button {
+    font-family: 'Potta One', cursive;
+    font-family: 'Press Start 2P', cursive;
+}
+
 
 footer {
     color: white;
