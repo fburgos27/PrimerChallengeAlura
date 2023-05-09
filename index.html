@@ -11,47 +11,37 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
         
     </head>
 
     <body>
         <header>
-            <div class="logo">
-                <img src="images/Logo.svg">
-            </div>
+                <img src="images/Logo.svg" class="logo" alt="Logo de Alura">
         </header>
 
         <main>
-            <section class="text-area-all">
-                <div class="text-area">
-                    <textarea class="encrypt-text" cols="70" rows="10" inputmode="latin" autofocus required type="text" style="text-transform:lowercase;" placeholder="Ingrese aquí el texto que desea encriptar o desencriptar"></textarea>
-                </div>
-
-                <div class="advice">
-                    <p>
+            <section class="left-section">
+                <textarea class="text-area" cols="30" rows="10" inputmode="latin" autofocus required type="text" placeholder="Ingrese aquí el texto que desea encriptar o desencriptar"></textarea>
+                <div>
+                    <p class="advice">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"/></svg>
                         Solo letras minúsculas y sin acento
                     </p>
                 </div>
 
-            </section>
-
-
-            <section class="buttons" >
-                <div>
+                <div class="buttons">
                     <input type="button" value="Encriptar" id="encrypt-button" onclick="encryptButton()">
-                </div>
-                <div>
+        
                     <input type="button" value="Desencriptar" id="decrypt-button" onclick="decryptButton()">
                 </div>
 
             </section>
 
-            <section>
+            <section class="right-section">
                 <textarea id="e-area" class="encrypted-area" cols="20" rows="10"></textarea>
                 <div>
-                    <input type="button" value="Copiar" id="copy-button" onclick="copyButton()" >
+                    <input type="button" value="Copiar" class="copy-button" id="copy-button" onclick="copyButton()" >
                 </div>
             </section>
         </main>
@@ -59,13 +49,13 @@
 
     </body>
 
-    <script src="script.js"></script>
-
+    
     <footer>
-        <p class="developer">Fabián Burgos </br> 
-            OracleOne Grupo5 </br>  
-            2023</p>
+        Fabián Burgos </br> 
+        OracleOne Grupo5 </br>  
+        2023
     </footer>
-
+    
+    <script src="script.js"></script>
 
 </html>    

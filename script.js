@@ -1,4 +1,4 @@
-const textArea = document.querySelector(".encrypt-text");
+const textArea = document.querySelector(".text-area");
 const msg = document.querySelector(".encrypted-area");
 
 function encryptButton() {
