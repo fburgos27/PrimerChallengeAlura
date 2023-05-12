@@ -5,6 +5,18 @@
     font-size: 32px;
     line-height: 150%;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .logo {
     padding-top:  10px;
     margin-left: 10px;
@@ -12,17 +24,25 @@
 }
 
 main {
+    flex: 1;
     display: flex;
     margin-bottom: 50px;
-    margin-left: 80px;
+    justify-content: center;
+
+}
+
+.left-area {
+    position: relative;
+    width: 70%;
 }
 
 .text-area {
     border: none;
     color: #0A3871;
     margin-top: 90px;
-    text-transform: lowercase;
     resize: none;
+    width: 100%;
+    height: 60%;
 }
 
 ::placeholder { color: #0A3871;}
@@ -30,22 +50,12 @@ main {
         outline: none;
     }
 
-.encrypted-area {
-    background: white;
-    background-image: url("images/Muñeco.svg");
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 24px;
-    color: #0A3871;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
-    position: fixed;
-    resize: none;
-}
-
-.encrypted-area:focus {
-    outline: none;
+.advice {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
 }
 
 .buttons {
@@ -74,23 +84,241 @@ main {
     margin-left: 30px;
 }
 
+.right-section {
+    background: white;
+    border: none;
+    border-radius: 24px;
+    margin-left: 98px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.muneco-text {
+    background: white;
+    text-align: center;
+}
+
+.muneco {
+    background: white;
+}
+
+.encrypted-area {
+    background: white;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    resize: none;
+    padding-inline: 20px;
+    padding-top: 20px;
+}
+
+.encrypted-area:focus {
+    outline: none;
+}
+
+.text-one {
+    background: white;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    padding-inline: 10%;
+}
+
+.text-two {
+    background: white;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    padding-inline: 10%;
+}
+
+
+
 .copy-button {
+    display: none;
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
     width: 336px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 footer {
-    font-size: 18px;
+    background: #0A3871;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 2.3%;
+    font-family: 'Inter';
+    line-height: 150%;
 }
 
-footer > :nth-child(1){
-    font-size: 50px;
+
+/* Para modo tablet */
+
+@media screen and (min-width: 500px) and (max-width: 940px) {
+    .logo {
+        padding-top:  75px;
+        width: 15%;
+        margin-left: 0px;
+    }
+    
+    main {
+        display: block;
+        margin-bottom: 50px;
+        flex: 0;
+        margin-left: 50px;
+    }
+    
+    .left-area {
+        position: relative;
+        width: 70%;
+    }
+    
+    .text-area {
+        border: none;
+        color: #0A3871;
+        margin-top: 90px;
+        resize: none;
+        height: 50vh;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+    }
+    
+    ::placeholder { color: #0A3871;}
+        .text-area:focus {
+            outline: none;
+        }
+    
+    .advice {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .buttons {
+        justify-content: space-evenly;
+        text-align: center;
+        margin-top: 18px;
+    }
+    
+    #encrypt-button {
+        background: #0A3871;
+        border-radius: 24px;
+        border: 1px solid #0A3871;
+        color: white;
+        cursor: pointer;
+        height: 67px;
+        width: 350px;
+    }
+    
+    #decrypt-button {
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        color: #0A3871;
+        cursor: pointer;
+        height: 67px;
+        width: 350px;
+    
+    }
+
+    .right-section {
+        background: white;
+        border: none;
+        border-radius: 24px;
+        margin-left: 0px;
+        margin-top: 50px;
+        position: relative;
+        text-align: center;
+    }
+    
+    .muneco-text {
+        position: relative;
+    }
+
+    .muneco {
+        display: none;
+    }
+
+    .text-one {
+        position: absolute;
+        bottom: 120px;
+        width: 97%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para mayor legibilidad */
+        padding: 10px;
+        margin: 0;
+    }
+
+    .text-two {
+        position: absolute;
+        bottom: 70px;
+        width: 97%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para mayor legibilidad */
+        padding: 10px;
+        margin: 0;
+        }
+
+    .encrypted-area {
+        width: 90%;
+        background: white;
+        border: none;
+        border-radius: 24px;
+        color: #0A3871;
+        resize: none;
+        padding-inline: 20px;
+        padding-top: 20px;
+        margin-bottom: 80px;
+    }
+    
+    .encrypted-area:focus {
+        outline: none;
+    }
+
+    .encrypted-area::placeholder {
+        content: "Ingresa el texto que deseas encriptar o desencriptar";
+    
+    .copy-button {
+        display: none;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        color: #0A3871;
+        cursor: pointer;
+        height: 67px;
+        width: 336px;
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10px;
+    }
+    
+    footer {
+        background: #0A3871;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 2.3%;
+        font-family: 'Inter';
+        line-height: 150%;
+    }
 }

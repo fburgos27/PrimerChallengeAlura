@@ -1,11 +1,16 @@
 const textArea = document.querySelector(".text-area");
 const msg = document.querySelector(".encrypted-area");
+const textImage = document.querySelector(".muneco-text");
+const munecoImage = "images/muñeco.svg"
 
 function encryptButton() {
     let encryptedText = encrypt(textArea.value);
+    let copybutton = document.querySelector('.copy-button');
     msg.value = encryptedText;
     textArea.value = "";
-    msg.style.backgroundImage = "none";
+    textImage.style.display = "none";
+    copybutton.style.display = 'block';
+    msg.style.height = "550px";
 }
 
 function encrypt(text) {
@@ -22,9 +27,12 @@ function encrypt(text) {
 
 function decryptButton() {
     let decryptedText = decrypt(textArea.value);
+    let copybutton = document.querySelector('.copy-button');
     msg.value = decryptedText;
     textArea.value = "";
-    msg.style.backgroundImage = "none";
+    copybutton.style.display = 'block';
+    textImage.style.display = "none";
+    msg.style.height = "550px";
 }
 
 function decrypt(text) {
@@ -37,10 +45,12 @@ function decrypt(text) {
     decryptText = decryptText.replace(/ober/g, 'o');
     decryptText = decryptText.replace(/ufat/g, 'u');
     return decryptText;
+
 }
 
 function copyButton() {
     let text = document.getElementById("e-area").value;
+    let copybutton = document.querySelector('.copy-button');
     navigator.clipboard.writeText(text)
     .then(() => {
         alert("Texto copiado al portapapeles");
@@ -48,6 +58,10 @@ function copyButton() {
     .catch((error) => {
         alert("Error al copiar el texto: ", error);
     });
-
+    msg.value = "";
+    copybutton.style.display = 'none';
+    textImage.style.display = "block";
+    msg.style.height = "auto";
 }
+
 

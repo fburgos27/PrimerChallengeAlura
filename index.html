@@ -22,13 +22,12 @@
 
         <main>
             <section class="left-section">
-                <textarea class="text-area" cols="30" rows="10" inputmode="latin" autofocus required type="text" placeholder="Ingrese aquí el texto que desea encriptar o desencriptar"></textarea>
-                <div>
-                    <p class="advice">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"/></svg>
-                        Solo letras minúsculas y sin acento
-                    </p>
-                </div>
+                <textarea class="text-area" inputmode="latin" autofocus required type="text" placeholder="Ingrese aquí el texto que desea encriptar o desencriptar"></textarea>
+
+                <p class="advice">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"/></svg>
+                    Solo letras minúsculas y sin acento
+                </p>
 
                 <div class="buttons">
                     <input type="button" value="Encriptar" id="encrypt-button" onclick="encryptButton()">
@@ -39,10 +38,13 @@
             </section>
 
             <section class="right-section">
-                <textarea id="e-area" class="encrypted-area" cols="20" rows="10"></textarea>
-                <div>
-                    <input type="button" value="Copiar" class="copy-button" id="copy-button" onclick="copyButton()" >
+                <textarea id="e-area" class="encrypted-area" readonly></textarea>
+                <div class="muneco-text">
+                <img class="muneco" src="images/Muñeco.svg" alt="imagen de muñeco pensando">
+                <p class="text-one">Ningún mensaje encontrado</p> 
+                <p class="text-two">Ingresa el texto que deseas encriptar o desencriptar.</p>
                 </div>
+                <input type="button" value="Copiar" class="copy-button" id="copy-button" onclick="copyButton()" >
             </section>
         </main>
 
