@@ -10,7 +10,7 @@ function encryptButton() {
     textArea.value = "";
     textImage.style.display = "none";
     copybutton.style.display = 'block';
-    msg.style.height = "58vh";
+    msg.style.height = "55vh";
 }
 
 function encrypt(text) {
@@ -32,7 +32,7 @@ function decryptButton() {
     textArea.value = "";
     copybutton.style.display = 'block';
     textImage.style.display = "none";
-    msg.style.height = "58vh";
+    msg.style.height = "55vh";
 }
 
 function decrypt(text) {
